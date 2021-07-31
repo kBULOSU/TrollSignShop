@@ -2,6 +2,7 @@ package com.trollpixel.signshop;
 
 import com.trollpixel.signshop.controller.ChestShopController;
 import com.trollpixel.signshop.dao.ChestShopDAO;
+import com.trollpixel.signshop.inventories.InventoryListener;
 import com.trollpixel.signshop.listeners.BlockListeners;
 import com.trollpixel.signshop.listeners.player.PlayerChatListener;
 import com.trollpixel.signshop.listeners.player.PlayerInteractListener;
@@ -50,6 +51,7 @@ public class SignShopPlugin extends JavaPlugin {
         pluginManager.registerEvents(new BlockListeners(chestShopDAO, chestShopController), this);
         pluginManager.registerEvents(new PlayerChatListener(), this);
         pluginManager.registerEvents(new PlayerInteractListener(chestShopDAO, chestShopController), this);
+        pluginManager.registerEvents(new InventoryListener(), this);
     }
 
     @Override
