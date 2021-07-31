@@ -1,0 +1,7 @@
+name: ChestShop
+author: yiatzz
+version: 1.0-SNAPSHOT
+main: com.trollpixel.signshop.SignShopPlugin
+description: Plugin de placa
+depend:
+  - Vault
